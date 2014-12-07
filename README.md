@@ -9,6 +9,9 @@ And finally user presses the Generate button, and gets the generated result by h
 
 Add-in very useful for creating bulk text output like SQL statements or HTML portions.
 
+Installation to Visual Studio 2012 : 
+Copy WebUcu.LilTextGen.AddIn, WebUcu.LilTextGen.dll and WebUcu.LilTextGen.dll.config into C:\Users\<username>\Documents\Visual Studio 2012\Addins\
+
 ![LilTextGen in Visual Studio 2012 Tools Menu](http://webucu.com/githubcontent/LilTextGen_VisualStudioToolsMenu.jpg?raw=true "LilTextGen in Visual Studio 2012 Tools Menu")
 
 ![Generating Sql Statements by LilTextGen](http://webucu.com/githubcontent/LilTextGen_LilTextGen_SqlSample.jpg?raw=true "Generating Sql Statements by LilTextGen")
