@@ -56,6 +56,52 @@
             <param term='handled'>Informs the caller if the command was handled or not.</param>
             <seealso class='Exec' />
         </member>
+        <member name="T:WebUcu.LilTextGen.Entity.TextGenerationInput">
+            <summary>
+            Text generation request entity. Carries parameters that needed for text generation.
+            </summary>
+        </member>
+        <member name="P:WebUcu.LilTextGen.Entity.TextGenerationInput.InputLines">
+            <summary>
+            Comma seperated input lines.
+            </summary>
+        </member>
+        <member name="P:WebUcu.LilTextGen.Entity.TextGenerationInput.Template">
+            <summary>
+            Template to generate result text.
+            </summary>
+        </member>
+        <member name="T:WebUcu.LilTextGen.Entity.TextGenerationResult">
+            <summary>
+            Text generation output entity.
+            </summary>
+        </member>
+        <member name="P:WebUcu.LilTextGen.Entity.TextGenerationResult.Results">
+            <summary>
+            Result lines.
+            </summary>
+        </member>
+        <member name="T:WebUcu.LilTextGen.TextGenerator">
+            <summary>
+            Text generator object.
+            </summary>
+        </member>
+        <member name="M:WebUcu.LilTextGen.TextGenerator.Generate">
+            <summary>
+            Generates text by inputs.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:WebUcu.LilTextGen.TextGenerator.Input">
+            <summary>
+            Text generation inputs.
+            </summary>
+        </member>
+        <member name="P:WebUcu.LilTextGen.TextGenerator.Result">
+            <summary>
+            Text generation outputs.
+            </summary>
+        </member>
         <member name="F:WebUcu.LilTextGen.TextGenMainForm.components">
             <summary>
             Required designer variable.

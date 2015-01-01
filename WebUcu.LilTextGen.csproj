@@ -61,6 +61,8 @@
     <Compile Include="Connect.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Entity\TextGenerationInput.cs" />
+    <Compile Include="Entity\TextGenerationResult.cs" />
     <Compile Include="TextGenerator.cs" />
     <Compile Include="TextGenMainForm.cs">
       <SubType>Form</SubType>

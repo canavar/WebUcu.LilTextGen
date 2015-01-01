@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using WebUcu.LilTextGen.Entity;
 
 namespace WebUcu.LilTextGen
 {
@@ -38,24 +39,29 @@ namespace WebUcu.LilTextGen
             string template = txtTemplate.Text;
             string inputs = txtInputs.Text;
             string[] inputRows = inputs.Split('\r');
-            StringBuilder sbResult = new StringBuilder();
 
-            foreach (string inputRow in inputRows)
-            {
-                string resultString = inputRow.Replace("\n", "");
-                if (resultString.Length > 0)
-                {
-                    string[] inputValues = resultString.Split(',');
-                    if (inputValues.Length > 0)
-                    {
-                        sbResult.AppendFormat(template, inputValues);
-                        sbResult.AppendFormat("\r\n");
-                    }
-                }
-            }
+            TextGenerationInput input = new TextGenerationInput(template, new List<string>(inputRows));
+            TextGenerator generator = new TextGenerator(input);
+            TextGenerationResult results = generator.Generate();
+            
+            //StringBuilder sbResult = new StringBuilder();
 
-            txtResults.Text = sbResult.ToString();
-            lblStatus.Text = String.Format("{0} rows generated.", inputRows.Length);
+            //foreach (string inputRow in inputRows)
+            //{
+            //    string resultString = inputRow.Replace("\n", "");
+            //    if (resultString.Length > 0)
+            //    {
+            //        string[] inputValues = resultString.Split(',');
+            //        if (inputValues.Length > 0)
+            //        {
+            //            sbResult.AppendFormat(template, inputValues);
+            //            sbResult.AppendFormat("\r\n");
+            //        }
+            //    }
+            //}
+
+            txtResults.Text = results.ToString();
+            lblStatus.Text = String.Format("{0} rows generated.", results.Results.Count);
         }
 
         private void btnClear_Click(object sender, EventArgs e)
